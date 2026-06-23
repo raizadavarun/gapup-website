@@ -8,11 +8,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2">
           <span className="text-text font-semibold text-sm tracking-tight">
-            GapUp
+            MoNor
           </span>
           <span className="text-text-muted text-sm">·</span>
           <span className="text-text-muted text-sm">
-            Turning Data Into Decisions
+            Disciplined research. Systematic models. Unemotional execution.
           </span>
         </div>
 
@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
 
         <p className="text-text-muted text-sm">
-          © {year} GapUp. All rights reserved.
+          © {year} MoNor. All rights reserved.
         </p>
       </div>
     </footer>

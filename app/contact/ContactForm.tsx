@@ -20,9 +20,9 @@ export default function ContactForm() {
   if (status === "success") {
     return (
       <div className="flex flex-col items-start justify-center py-8">
-        <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-6">
+        <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
           <svg
-            className="w-5 h-5 text-accent"
+            className="w-5 h-5 text-blue-300"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

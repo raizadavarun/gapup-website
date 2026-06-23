@@ -15,20 +15,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GapUp — Turning Data Into Decisions",
+  title: "MoNor — Disciplined research. Systematic models. Unemotional execution.",
   description:
-    "GapUp develops research-driven quantitative models that transform data into repeatable, automated decisions.",
+    "MoNor is a research-and-automation firm. We research a problem, build a systematic model around it, and automate the execution — delivered as a service to the firms that need it.",
   keywords: [
     "quantitative research",
-    "data intelligence",
-    "automated decisions",
-    "quantitative models",
+    "algorithmic models",
+    "research automation",
+    "systematic execution",
+    "model risk",
+    "data analytics",
   ],
   openGraph: {
-    title: "GapUp — Turning Data Into Decisions",
+    title: "MoNor — Disciplined research. Systematic models. Unemotional execution.",
     description:
-      "GapUp develops research-driven quantitative models that transform data into repeatable, automated decisions.",
+      "MoNor is a research-and-automation firm. We research a problem, build a systematic model around it, and automate the execution — delivered as a service to the firms that need it.",
     type: "website",
+  },
+  icons: {
+    // TODO: confirm which icon variant to use once domain/branding is finalised
+    icon: "/monor_icon_navy.svg",
+    shortcut: "/monor_icon_navy.svg",
   },
 };
 

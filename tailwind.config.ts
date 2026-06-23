@@ -9,13 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#030712",
-        primary: "#00D4FF",
-        accent: "#00FFB3",
-        surface: "#0D1117",
-        border: "#1E2D3D",
+        background: "#0E182D",
+        primary: "#1E3A8A",
+        accent: "#1F5F52",
+        surface: "#1E2127",
+        border: "#263347",
         text: {
-          DEFAULT: "#F8FAFC",
+          DEFAULT: "#FFFFFF",
           muted: "#94A3B8",
         },
       },

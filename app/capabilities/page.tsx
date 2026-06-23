@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SectionLabel from "@/components/SectionLabel";
 
 export const metadata: Metadata = {
-  title: "Capabilities — GapUp",
+  title: "Capabilities — MoNor",
   description:
-    "GapUp's quantitative capabilities: research, model development, decision frameworks, and automation.",
+    "MoNor's four capability pillars: Quant Edge, Data Analytics, Model Risk & Robustness, and Algo and Tech.",
 };
 
 const capabilities = [
   {
     number: "01",
-    title: "Quantitative Research",
-    subtitle: "Understanding complexity through data",
+    title: "Quant Edge",
+    subtitle: "Where every model starts",
     description:
-      "We approach every problem as a research question. Our process starts with data acquisition, cleaning, and exploration — followed by rigorous hypothesis formation and empirical testing. We do not build on assumptions; we build on evidence.",
+      "We research a problem properly before we ever attempt to solve it. Every engagement begins with empirical inquiry — data acquisition, rigorous hypothesis testing, and evidence-based analysis. We do not build on assumptions; we build on what the data actually shows.",
     points: [
       "Exploratory and confirmatory data analysis",
       "Statistical hypothesis testing and validation",
@@ -23,61 +24,59 @@ const capabilities = [
   },
   {
     number: "02",
-    title: "Model Development",
-    subtitle: "Quantifying patterns and relationships",
+    title: "Data Analytics",
+    subtitle: "The evidence behind every model decision",
     description:
-      "Once a signal or pattern is validated through research, we codify it into a precise model. Models are versioned, stress-tested, and continuously monitored. We build for longevity — not just accuracy on training data.",
+      "Data-driven analysis and signal discovery — the process that separates real patterns from noise. We work systematically through data to surface what is repeatable and actionable, applying rigorous methodology at every step before a finding is trusted.",
     points: [
-      "Statistical and machine learning model construction",
-      "Feature engineering and selection",
-      "Regime detection and adaptive model frameworks",
-      "Robustness testing across market and environmental conditions",
+      "Structured and unstructured data pipelines",
+      "Feature engineering and signal selection",
+      "Regime analysis and pattern classification",
+      "Quantitative validation and out-of-sample testing",
     ],
   },
   {
     number: "03",
-    title: "Decision Frameworks",
-    subtitle: "Transforming intelligence into action",
+    title: "Model Risk & Robustness",
+    subtitle: "Tested against what can go wrong",
     description:
-      "A model is only as valuable as the decision it enables. We build structured frameworks that convert model output into unambiguous, consistent decisions — removing discretion from the execution layer and making outcomes reproducible.",
+      "No model goes live until it has been stress-tested against what can go wrong, not just what we hope goes right. We build for longevity, not just accuracy on training data — validating models against adverse conditions, edge cases, and real-world variation before they are trusted to run unattended.",
     points: [
-      "Signal-to-decision translation pipelines",
-      "Rule-based and probabilistic decision systems",
-      "Position sizing and allocation logic",
-      "Threshold design and confidence interval management",
+      "Stress testing and scenario analysis",
+      "Overfitting detection and out-of-sample validation",
+      "Regime robustness across environmental conditions",
+      "Ongoing monitoring and performance attribution",
     ],
   },
   {
     number: "04",
-    title: "Automation",
-    subtitle: "Scaling proven decision frameworks consistently",
+    title: "Algo and Tech",
+    subtitle: "The execution layer",
     description:
-      "When a decision framework is validated, we automate it. Automation removes human latency, eliminates emotional variance, and allows the same disciplined logic to scale across volume and frequency that no manual process can match.",
+      "Automation that runs the model exactly as designed, every time, without emotion. Once a model is validated, we build the systems that deploy it at scale — removing human latency, eliminating variance, and allowing the same disciplined logic to operate across volume and frequency that no manual process can match.",
     points: [
       "End-to-end execution pipeline engineering",
       "Real-time signal ingestion and processing",
       "Monitoring, alerting, and circuit breaker systems",
-      "Performance attribution and continuous improvement loops",
+      "Continuous improvement and performance loops",
     ],
   },
 ];
 
 export default function CapabilitiesPage() {
   return (
-    <div className="pt-16">
+    <div className="pt-24">
       {/* Header */}
       <section className="py-28 px-6 border-b border-border">
         <div className="max-w-4xl mx-auto">
-          <p className="text-primary text-xs tracking-widest uppercase mb-4">
-            Capabilities
-          </p>
+          <SectionLabel className="mb-4">Capabilities</SectionLabel>
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight mb-8">
-            What GapUp
+            What MoNor
             <br />
             <span className="text-text-muted font-light">Builds</span>
           </h1>
           <p className="text-text-muted text-lg leading-relaxed max-w-2xl">
-            Four interconnected disciplines, each rigorous on its own — and
+            Four interconnected disciplines — each rigorous on its own, and
             significantly more powerful in sequence.
           </p>
         </div>
@@ -99,7 +98,7 @@ export default function CapabilitiesPage() {
                   <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mt-2 mb-2">
                     {cap.title}
                   </h2>
-                  <p className="text-accent text-sm">{cap.subtitle}</p>
+                  <p className="text-emerald-400/70 text-sm">{cap.subtitle}</p>
                 </div>
                 <div className="md:col-span-8">
                   <p className="text-text-muted leading-relaxed mb-8">
@@ -109,7 +108,7 @@ export default function CapabilitiesPage() {
                     {cap.points.map((point) => (
                       <li key={point} className="flex items-start gap-3">
                         <svg
-                          className="w-4 h-4 text-primary mt-0.5 flex-shrink-0"
+                          className="w-4 h-4 text-blue-300 mt-0.5 flex-shrink-0"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -140,11 +139,11 @@ export default function CapabilitiesPage() {
           </h2>
           <p className="text-text-muted mb-8 text-sm leading-relaxed">
             Every engagement starts with a conversation. Reach out and we'll
-            discuss where quantitative intelligence can create leverage for you.
+            discuss where research-and-automation can create leverage for you.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-background font-medium text-sm hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-medium text-sm hover:bg-primary/90 transition-colors"
           >
             Start a Conversation
           </Link>

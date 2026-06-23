@@ -1,89 +1,114 @@
 import type { Metadata } from "next";
+import SectionLabel from "@/components/SectionLabel";
 
 export const metadata: Metadata = {
-  title: "About — GapUp",
+  title: "About — MoNor",
   description:
-    "GapUp is a quantitative intelligence company building research-driven models that transform data into repeatable decisions.",
+    "MoNor is a research-and-automation firm. We research a problem, build a systematic model around it, and automate the execution — delivered as a service.",
 };
 
 const pillars = [
   {
     number: "01",
-    title: "Research",
+    title: "Quant Edge",
     description:
-      "Everything begins with rigorous empirical inquiry. We interrogate data with the discipline of science — forming hypotheses, running controlled analyses, and only accepting findings that survive statistical scrutiny. Opinion has no place in our process.",
+      "The research and modeling capability itself — MoNor's intellectual core. Every engagement begins with rigorous empirical inquiry: we form hypotheses, run controlled analyses, and only accept findings that survive scrutiny. The model that emerges is only as strong as the research behind it.",
   },
   {
     number: "02",
-    title: "Models",
+    title: "Data Analytics",
     description:
-      "Research findings are codified into precise quantitative models. These models capture the relationships and patterns identified through analysis, translating complex dynamics into mathematical structures that can be validated, versioned, and improved over time.",
+      "The data-driven process behind every model we build — how signals are found and tested. We work systematically through data to surface what is real and repeatable, separating genuine patterns from noise. No assumption is too obvious to verify.",
   },
   {
     number: "03",
-    title: "Decisions",
+    title: "Model Risk & Robustness",
     description:
-      "Models produce signals. Signals produce decisions. We build frameworks that transform model output into clear, consistent, actionable choices — eliminating the ambiguity and emotional variance that undermines human judgement at scale.",
+      "How models are stress-tested and validated before being trusted to automate. No model goes live until it has been challenged against what can go wrong, not just what we hope goes right. Robustness is not a nice-to-have — it is a prerequisite.",
   },
   {
     number: "04",
-    title: "Automation",
+    title: "Algo and Tech",
     description:
-      "Proven decision frameworks are automated for consistent, scalable execution. Automation removes latency, eliminates manual error, and allows the same rigorous logic to operate across far greater volume than any human team could manage.",
+      "The automation and execution infrastructure that makes it real. Once a model is validated, we build the systems that run it exactly as designed — every time, without emotion, without drift. This is where research becomes a product.",
   },
 ];
 
 export default function AboutPage() {
   return (
-    <div className="pt-16">
+    <div className="pt-24">
       {/* Header */}
       <section className="py-28 px-6 border-b border-border">
         <div className="max-w-4xl mx-auto">
-          <p className="text-primary text-xs tracking-widest uppercase mb-4">
-            About GapUp
-          </p>
+          <SectionLabel className="mb-8">About MoNor</SectionLabel>
+          <img
+            src="/monor_icon_white.svg"
+            alt=""
+            aria-hidden="true"
+            className="block mb-5 opacity-90"
+            style={{ height: "80px", width: "auto" }}
+          />
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight mb-8">
-            Quantitative Intelligence,
+            Research. Model. Automate.
             <br />
-            <span className="text-text-muted font-light">Built to Scale</span>
+            <span className="text-text-muted font-light">Built to Scale.</span>
           </h1>
           <p className="text-text-muted text-lg leading-relaxed max-w-2xl">
-            GapUp is a quantitative intelligence company. We develop research-
-            driven models that transform data into repeatable, automated
-            decisions — applied wherever complexity and scale demand precision.
+            Disciplined research becomes models. Models become systems.
           </p>
         </div>
       </section>
 
-      {/* What GapUp Is */}
+      {/* What MoNor Is */}
       <section className="py-24 px-6 border-b border-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="text-primary text-xs tracking-widest uppercase mb-4">
-              What We Are
-            </p>
+            <SectionLabel className="mb-4">What We Are</SectionLabel>
             <h2 className="text-3xl font-semibold tracking-tight mb-6">
-              Not a trading firm.
+              A research-and-automation firm.
               <br />
-              Not a software company.
+              <span className="text-text-muted font-light">Not a fund. Not a software house.</span>
             </h2>
           </div>
           <div className="space-y-5 text-text-muted leading-relaxed">
             <p>
-              GapUp sits at the intersection of data science, quantitative
-              modelling, and systematic decision-making. We are not a broker,
-              not a fund, and not a generic software house.
+              MoNor researches a problem, builds an algorithmic model around it,
+              and automates the execution. We provide this as a service — B2B —
+              to client firms who need that capability built right, not bolted on.
             </p>
             <p>
-              We are a company that builds intelligence infrastructure — the
-              kind that turns raw data into structured insight, and structured
-              insight into automated action.
+              Currently applied to the finance industry, but the approach is not
+              finance-exclusive. Wherever decisions are made on instinct when the
+              data to do better already exists, there is a MoNor-shaped problem.
             </p>
             <p>
-              Our work is grounded in the belief that the most defensible
-              advantage in any data-rich environment is the quality of your
-              research process and the robustness of the models that emerge
-              from it.
+              We were founded by two people from different backgrounds — banking
+              and financial services, and data analytics and systems — who saw
+              the same gap from different angles. That gap is what we close.
+            </p>
+            <p className="text-text font-light italic">
+              "Data doesn't promise a destination. It just makes sure you're
+              always facing the right direction."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Name meaning */}
+      <section className="py-16 px-6 border-b border-border bg-surface/20">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-8">
+          <div className="flex-shrink-0">
+            <span className="text-5xl md:text-7xl font-semibold tracking-tight text-gradient-primary">
+              MoNor
+            </span>
+          </div>
+          <div className="text-text-muted leading-relaxed">
+            <p className="text-text font-medium mb-2">Mo + Nor — Moving North.</p>
+            <p>
+              Disciplined data and process give you direction, not a guaranteed
+              destination. The name reflects the firm's core conviction: that the
+              right approach always points you the right way, even when outcomes
+              are uncertain.
             </p>
           </div>
         </div>
@@ -93,9 +118,7 @@ export default function AboutPage() {
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
-            <p className="text-primary text-xs tracking-widest uppercase mb-4">
-              Strategic Pillars
-            </p>
+            <SectionLabel className="mb-4">Four Pillars</SectionLabel>
             <h2 className="text-3xl font-semibold tracking-tight">
               How We Operate
             </h2>
@@ -125,43 +148,37 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Core Narrative */}
+      {/* Supporting tagline */}
       <section className="py-24 px-6 border-t border-border bg-surface/20">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-primary text-xs tracking-widest uppercase mb-6">
-            Core Narrative
-          </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
-            {["Data", "Research", "Models", "Decisions", "Automation"].map(
-              (step, i, arr) => (
-                <div key={step} className="flex items-center gap-3 md:gap-4">
-                  <div className="text-center">
-                    <div className="px-4 py-2 rounded-lg border border-primary/20 bg-primary/5 text-primary text-sm font-medium">
-                      {step}
-                    </div>
+            {["Research", "Model", "Automate"].map((step, i, arr) => (
+              <div key={step} className="flex items-center gap-3 md:gap-4">
+                <div className="text-center">
+                  <div className="px-4 py-2 rounded-lg border border-primary/20 bg-primary/5 text-blue-300 text-sm font-medium">
+                    {step}
                   </div>
-                  {i < arr.length - 1 && (
-                    <svg
-                      className="w-4 h-4 text-border flex-shrink-0 rotate-90 md:rotate-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  )}
                 </div>
-              )
-            )}
+                {i < arr.length - 1 && (
+                  <svg
+                    className="w-4 h-4 text-border flex-shrink-0 rotate-90 md:rotate-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                )}
+              </div>
+            ))}
           </div>
           <p className="text-text-muted mt-10 text-base leading-relaxed max-w-xl mx-auto">
-            This is the GapUp pipeline. Every engagement, every product, every
-            model we build follows this sequence without exception.
+            Disciplined research becomes models. Models become systems.
           </p>
         </div>
       </section>

@@ -35,7 +35,7 @@ export default function GridBackground() {
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 0.15,
         vy: (Math.random() - 0.5) * 0.15,
-        opacity: Math.random() * 0.4 + 0.05,
+        opacity: Math.random() * 0.35 + 0.05,
         size: Math.random() * 1.5 + 0.5,
       }));
     };
@@ -54,11 +54,10 @@ export default function GridBackground() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 212, 255, ${p.opacity})`;
+        ctx.fillStyle = `rgba(147, 197, 253, ${p.opacity})`;
         ctx.fill();
       });
 
-      // Draw connections for nearby particles
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -68,7 +67,7 @@ export default function GridBackground() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(0, 212, 255, ${0.04 * (1 - dist / 120)})`;
+            ctx.strokeStyle = `rgba(30, 58, 138, ${0.08 * (1 - dist / 120)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -92,7 +91,7 @@ export default function GridBackground() {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{ opacity: 0.6 }}
+      style={{ opacity: 0.5 }}
     />
   );
 }

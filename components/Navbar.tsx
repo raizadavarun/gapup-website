@@ -19,23 +19,16 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="relative w-8 h-8 rounded overflow-hidden bg-[#1E2D3D] flex items-center justify-center">
-            <Image
-              src="/logo.png"
-              alt="GapUp"
-              width={32}
-              height={32}
-              className="object-contain"
-              onError={(e) => {
-                e.currentTarget.style.display = "none";
-              }}
-            />
-          </div>
-          <span className="text-text font-semibold text-lg tracking-tight">
-            GapUp
-          </span>
+      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+        <Link href="/" className="flex items-center">
+          {/* Replace with <Image src="/monor-lockup-white.svg" ...> once logo files are added to /public */}
+          <Image
+            src="/monor_lockup_white.svg"
+            alt="MoNor"
+            width={160}
+            height={49}
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -46,7 +39,7 @@ export default function Navbar() {
               href={link.href}
               className={`text-sm transition-colors duration-200 ${
                 pathname === link.href
-                  ? "text-primary"
+                  ? "text-white"
                   : "text-text-muted hover:text-text"
               }`}
             >
@@ -97,7 +90,7 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className={`text-sm transition-colors duration-200 ${
                   pathname === link.href
-                    ? "text-primary"
+                    ? "text-white"
                     : "text-text-muted hover:text-text"
                 }`}
               >

@@ -12,7 +12,7 @@ export default function Footer() {
           </span>
           <span className="text-text-muted text-sm">·</span>
           <span className="text-text-muted text-sm">
-            Disciplined research. Systematic models. Unemotional execution.
+            Disciplined research. Systematic models. Automated execution.
           </span>
         </div>
 

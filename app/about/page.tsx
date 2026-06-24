@@ -36,7 +36,7 @@ const pillars = [
 
 export default function AboutPage() {
   return (
-    <div className="pt-24">
+    <div className="pt-32">
       {/* Header */}
       <section className="py-28 px-6 border-b border-border">
         <div className="max-w-4xl mx-auto">
@@ -59,41 +59,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* What MoNor Is */}
-      <section className="py-24 px-6 border-b border-border">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          <div>
-            <SectionLabel className="mb-4">What We Are</SectionLabel>
-            <h2 className="text-3xl font-semibold tracking-tight mb-6">
-              A research-and-automation firm.
-              <br />
-              <span className="text-text-muted font-light">Not a fund. Not a software house.</span>
-            </h2>
-          </div>
-          <div className="space-y-5 text-text-muted leading-relaxed">
-            <p>
-              MoNor researches a problem, builds an algorithmic model around it,
-              and automates the execution. We provide this as a service — B2B —
-              to client firms who need that capability built right, not bolted on.
-            </p>
-            <p>
-              Currently applied to the finance industry, but the approach is not
-              finance-exclusive. Wherever decisions are made on instinct when the
-              data to do better already exists, there is a MoNor-shaped problem.
-            </p>
-            <p>
-              We were founded by two people from different backgrounds — banking
-              and financial services, and data analytics and systems — who saw
-              the same gap from different angles. That gap is what we close.
-            </p>
-            <p className="text-text font-light italic">
-              "Data doesn't promise a destination. It just makes sure you're
-              always facing the right direction."
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Name meaning */}
       <section className="py-16 px-6 border-b border-border bg-surface/20">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-8">
@@ -109,6 +74,39 @@ export default function AboutPage() {
               destination. The name reflects the firm's core conviction: that the
               right approach always points you the right way, even when outcomes
               are uncertain.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What MoNor Is */}
+      <section className="py-24 px-6 border-b border-border">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          <div>
+            <SectionLabel className="mb-4">What We Are</SectionLabel>
+            <h2 className="text-3xl font-semibold tracking-tight mb-6">
+              A research-and-automation firm.
+              <br />
+              <span className="text-text-muted font-light">Downside defined, upside designed.</span>
+            </h2>
+          </div>
+          <div className="space-y-5 text-text-muted leading-relaxed text-justify">
+            <p>
+              MoNor researches a problem, lets data define the risk and upside,
+              builds an algorithmic model around it, and automates the execution.
+            </p>
+            <p>
+              Wherever decisions are made on instinct when the data to do better
+              already exists, there is a MoNor-shaped solution available.
+            </p>
+            <p>
+              Our founders come with varied backgrounds — banking and financial
+              services, and data analytics and systems — they saw the same gap
+              from different angles. That gap is what we close.
+            </p>
+            <p className="text-text font-light italic">
+              "Data doesn't promise a destination. It just makes sure you're
+              always facing the right direction."
             </p>
           </div>
         </div>

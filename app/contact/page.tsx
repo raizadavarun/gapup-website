@@ -9,19 +9,14 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="pt-24">
+    <div className="pt-32">
       {/* Header */}
       <section className="py-28 px-6 border-b border-border">
         <div className="max-w-4xl mx-auto">
           <SectionLabel className="mb-4">Contact</SectionLabel>
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight mb-8">
+          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
             Get in Touch
           </h1>
-          <p className="text-text-muted text-lg leading-relaxed max-w-xl">
-            MoNor works with firms who want research and automation built right,
-            not bolted on. If that sounds like your problem, we'd welcome the
-            conversation.
-          </p>
         </div>
       </section>
 

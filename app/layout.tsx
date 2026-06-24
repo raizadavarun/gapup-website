@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MoNor — Disciplined research. Systematic models. Unemotional execution.",
+  title: "MoNor — Disciplined research. Systematic models. Automated execution.",
   description:
-    "MoNor is a research-and-automation firm. We research a problem, build a systematic model around it, and automate the execution — delivered as a service to the firms that need it.",
+    "MoNor is a research-and-automation firm. We research a problem, build a systematic model around it, and automates the execution — We partner with our clients to help them create this system.",
   keywords: [
     "quantitative research",
     "algorithmic models",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     "data analytics",
   ],
   openGraph: {
-    title: "MoNor — Disciplined research. Systematic models. Unemotional execution.",
+    title: "MoNor — Disciplined research. Systematic models. Automated execution.",
     description:
-      "MoNor is a research-and-automation firm. We research a problem, build a systematic model around it, and automate the execution — delivered as a service to the firms that need it.",
+      "MoNor is a research-and-automation firm. We research a problem, build a systematic model around it, and automates the execution — We partner with our clients to help them create this system.",
     type: "website",
   },
   icons: {

@@ -65,7 +65,7 @@ const capabilities = [
 
 export default function CapabilitiesPage() {
   return (
-    <div className="pt-24">
+    <div className="pt-32">
       {/* Header */}
       <section className="py-28 px-6 border-b border-border">
         <div className="max-w-4xl mx-auto">

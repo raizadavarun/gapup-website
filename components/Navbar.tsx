@@ -19,14 +19,13 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-32 flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          {/* Replace with <Image src="/monor-lockup-white.svg" ...> once logo files are added to /public */}
           <Image
             src="/monor_lockup_white.svg"
             alt="MoNor"
-            width={160}
-            height={49}
+            width={320}
+            height={98}
             priority
           />
         </Link>

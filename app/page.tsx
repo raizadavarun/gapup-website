@@ -121,16 +121,16 @@ export default function HomePage() {
             <br />
             <span className="text-gradient-primary">Systematic models.</span>
             <br />
-            Unemotional execution.
+            Automated execution.
           </h1>
           <p className="text-text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
             MoNor researches a problem, builds a model around it, and automates
-            the execution — delivered as a service to the firms that need it.
+            the execution — We partner with our clients to help them create this system.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/capabilities"
-              className="px-6 py-3 rounded-lg bg-primary text-white font-medium text-sm hover:bg-primary/90 transition-colors"
+              className="px-6 py-3 rounded-lg border border-border text-text-muted hover:text-text hover:border-text/30 transition-colors text-sm"
             >
               Our Capabilities
             </Link>
@@ -177,7 +177,7 @@ export default function HomePage() {
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
-                  <h3 className="text-text font-semibold text-base mb-2 md:text-center">
+                  <h3 className="text-text font-semibold text-2xl mb-2 md:text-center">
                     {step.label}
                   </h3>
                   <p className="text-text-muted text-sm leading-relaxed md:text-center">
@@ -270,17 +270,13 @@ export default function HomePage() {
             Why MoNor Exists
           </h2>
           <blockquote className="text-xl md:text-2xl text-text-muted leading-relaxed font-light">
-            "We believe decisions — in any industry — are too often made on
-            instinct when the data to do better already exists. MoNor exists to
-            close that gap: research that earns its conclusions, models that are
-            tested before they're trusted, and automation that holds up without
-            emotion or fatigue."
+            We strongly believe that decisions, in any industry, are too often
+            made on instinct without syncing these decisions with what data says.
+            MoNor exists to close that gap: research that earns its conclusions,
+            models that are tested before they're trusted, and automation that
+            holds up not looking at gut or instinct once data has taken the
+            decisions.
           </blockquote>
-          <div className="mt-10 flex items-center justify-center gap-2">
-            <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary/40" />
-            <span className="text-text-muted text-sm">MoNor</span>
-            <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary/40" />
-          </div>
         </div>
       </section>
 

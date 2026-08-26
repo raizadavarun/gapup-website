@@ -34,6 +34,21 @@ const pillars = [
   },
 ];
 
+const founders = [
+  {
+    initial: "V",
+    name: "Varun",
+    role: "Co-Founder",
+    bio: "Comes from a background in banking and financial services — the vantage point that shaped MoNor's conviction that disciplined, data-first process beats instinct, even in industries built on gut calls.",
+  },
+  {
+    initial: "B",
+    name: "Bhushan",
+    role: "Co-Founder",
+    bio: "Comes from a background in data analytics and systems — the vantage point that shaped MoNor's belief that a model is only as trustworthy as the automation and infrastructure that runs it.",
+  },
+];
+
 export default function AboutPage() {
   return (
     <div className="pt-32">
@@ -42,16 +57,16 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <SectionLabel className="mb-8">About MoNor</SectionLabel>
           <img
-            src="/monor_icon_white.svg"
+            src="/monor_icon_navy.svg"
             alt=""
             aria-hidden="true"
             className="block mb-5 opacity-90"
-            style={{ height: "80px", width: "auto" }}
+            style={{ height: "64px", width: "auto" }}
           />
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight mb-8">
+          <h1 className="font-serif text-4xl md:text-6xl font-semibold tracking-tight leading-tight mb-8">
             Research. Model. Automate.
             <br />
-            <span className="text-text-muted font-light">Built to Scale.</span>
+            <span className="text-text-muted italic font-normal">Built to Scale.</span>
           </h1>
           <p className="text-text-muted text-lg leading-relaxed max-w-2xl">
             Disciplined research becomes models. Models become systems.
@@ -60,10 +75,10 @@ export default function AboutPage() {
       </section>
 
       {/* Name meaning */}
-      <section className="py-16 px-6 border-b border-border bg-surface/20">
+      <section className="py-16 px-6 border-b border-border bg-surface/60">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-8">
           <div className="flex-shrink-0">
-            <span className="text-5xl md:text-7xl font-semibold tracking-tight text-gradient-primary">
+            <span className="font-serif italic text-5xl md:text-7xl font-semibold tracking-tight text-primary">
               MoNor
             </span>
           </div>
@@ -71,7 +86,7 @@ export default function AboutPage() {
             <p className="text-text font-medium mb-2">Mo + Nor — Moving North.</p>
             <p>
               Disciplined data and process give you direction, not a guaranteed
-              destination. The name reflects the firm's core conviction: that the
+              destination. The name reflects the firm&rsquo;s core conviction: that the
               right approach always points you the right way, even when outcomes
               are uncertain.
             </p>
@@ -84,13 +99,15 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div>
             <SectionLabel className="mb-4">What We Are</SectionLabel>
-            <h2 className="text-3xl font-semibold tracking-tight mb-6">
+            <h2 className="font-serif text-3xl font-semibold tracking-tight mb-6">
               A research-and-automation firm.
               <br />
-              <span className="text-text-muted font-light">Downside defined, upside designed.</span>
+              <span className="text-text-muted italic font-normal">
+                Downside defined, upside designed.
+              </span>
             </h2>
           </div>
-          <div className="space-y-5 text-text-muted leading-relaxed text-justify">
+          <div className="space-y-5 text-text-muted leading-relaxed">
             <p>
               MoNor researches a problem, lets data define the risk and upside,
               builds an algorithmic model around it, and automates the execution.
@@ -104,10 +121,44 @@ export default function AboutPage() {
               services, and data analytics and systems — they saw the same gap
               from different angles. That gap is what we close.
             </p>
-            <p className="text-text font-light italic">
-              "Data doesn't promise a destination. It just makes sure you're
-              always facing the right direction."
+            <p className="font-serif text-text italic">
+              &ldquo;Data doesn&rsquo;t promise a destination. It just makes sure you&rsquo;re
+              always facing the right direction.&rdquo;
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Founders */}
+      <section className="py-24 px-6 border-b border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-16">
+            <SectionLabel className="mb-4">Founders</SectionLabel>
+            <h2 className="font-serif text-3xl font-semibold tracking-tight">
+              Two Vantage Points, One Gap Closed
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
+            {founders.map((founder) => (
+              <div key={founder.name} className="bg-background p-10">
+                <div className="flex items-start gap-6">
+                  <div className="w-14 h-14 flex-shrink-0 flex items-center justify-center border border-primary/30 font-serif text-primary text-xl">
+                    {founder.initial}
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-text font-semibold text-xl">
+                      {founder.name}
+                    </h3>
+                    <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-primary/70 mb-4">
+                      {founder.role}
+                    </p>
+                    <p className="text-text-muted text-sm leading-relaxed">
+                      {founder.bio}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -117,7 +168,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <SectionLabel className="mb-4">Four Pillars</SectionLabel>
-            <h2 className="text-3xl font-semibold tracking-tight">
+            <h2 className="font-serif text-3xl font-semibold tracking-tight">
               How We Operate
             </h2>
           </div>
@@ -125,14 +176,14 @@ export default function AboutPage() {
             {pillars.map((pillar) => (
               <div
                 key={pillar.number}
-                className="bg-background p-10 hover:bg-surface/40 transition-colors"
+                className="bg-background p-10 hover:bg-surface/60 transition-colors"
               >
                 <div className="flex items-start gap-6">
-                  <span className="text-primary/40 font-mono text-sm pt-1 flex-shrink-0">
+                  <span className="text-primary/50 font-mono text-sm pt-1 flex-shrink-0">
                     {pillar.number}
                   </span>
                   <div>
-                    <h3 className="text-text font-semibold text-xl mb-4">
+                    <h3 className="font-serif text-text font-semibold text-xl mb-4">
                       {pillar.title}
                     </h3>
                     <p className="text-text-muted text-sm leading-relaxed">
@@ -147,34 +198,11 @@ export default function AboutPage() {
       </section>
 
       {/* Supporting tagline */}
-      <section className="py-24 px-6 border-t border-border bg-surface/20">
+      <section className="py-24 px-6 border-t border-border bg-surface/60">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
-            {["Research", "Model", "Automate"].map((step, i, arr) => (
-              <div key={step} className="flex items-center gap-3 md:gap-4">
-                <div className="text-center">
-                  <div className="px-4 py-2 rounded-lg border border-primary/20 bg-primary/5 text-blue-300 text-sm font-medium">
-                    {step}
-                  </div>
-                </div>
-                {i < arr.length - 1 && (
-                  <svg
-                    className="w-4 h-4 text-border flex-shrink-0 rotate-90 md:rotate-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                )}
-              </div>
-            ))}
-          </div>
+          <p className="font-mono text-xs tracking-[0.3em] uppercase text-text-muted">
+            Research · Model · Automate
+          </p>
           <p className="text-text-muted mt-10 text-base leading-relaxed max-w-xl mx-auto">
             Disciplined research becomes models. Models become systems.
           </p>

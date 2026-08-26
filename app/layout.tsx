@@ -1,17 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fraunces, Newsreader, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fraunces = Fraunces({
+  variable: "--font-display",
   subsets: ["latin"],
+  style: ["normal", "italic"],
+  weight: ["400", "500", "600"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const newsreader = Newsreader({
+  variable: "--font-text",
   subsets: ["latin"],
+  style: ["normal", "italic"],
+  weight: ["400", "500"],
+});
+
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -33,7 +43,6 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    // TODO: confirm which icon variant to use once domain/branding is finalised
     icon: "/monor_icon_navy.svg",
     shortcut: "/monor_icon_navy.svg",
   },
@@ -45,7 +54,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html
+      lang="en"
+      className={`${fraunces.variable} ${newsreader.variable} ${plexMono.variable}`}
+    >
       <body className="bg-background text-text font-sans antialiased">
         <Navbar />
         <main>{children}</main>

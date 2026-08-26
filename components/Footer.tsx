@@ -5,9 +5,9 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-border bg-background">
-      <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 font-mono">
         <div className="flex items-center gap-2">
-          <span className="text-text font-semibold text-xs tracking-tight">
+          <span className="text-text text-xs tracking-tight">
             MoNor Intelligence Labs Pvt. Ltd.
           </span>
           <span className="text-text-muted text-xs">·</span>
@@ -16,29 +16,29 @@ export default function Footer() {
           </span>
         </div>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 text-xs tracking-[0.1em] uppercase">
           <Link
             href="/about"
-            className="text-text-muted text-xs hover:text-text transition-colors"
+            className="text-text-muted hover:text-primary transition-colors"
           >
             About
           </Link>
           <Link
             href="/capabilities"
-            className="text-text-muted text-xs hover:text-text transition-colors"
+            className="text-text-muted hover:text-primary transition-colors"
           >
             Capabilities
           </Link>
           <Link
             href="/contact"
-            className="text-text-muted text-xs hover:text-text transition-colors"
+            className="text-text-muted hover:text-primary transition-colors"
           >
             Contact
           </Link>
         </div>
 
-        <p className="text-text-muted text-sm">
-          <span className="text-xs">© {year} MoNor Intelligence Labs Pvt. Ltd. All rights reserved.</span>
+        <p className="text-text-muted text-xs">
+          © {year} MoNor Intelligence Labs Pvt. Ltd. All rights reserved.
         </p>
       </div>
     </footer>

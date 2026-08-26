@@ -18,27 +18,27 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-6 h-32 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/90 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
-            src="/monor_lockup_white.svg"
+            src="/monor_lockup_navy.svg"
             alt="MoNor"
-            width={320}
-            height={98}
+            width={280}
+            height={86}
             priority
           />
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10 font-mono text-xs tracking-[0.15em] uppercase">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm transition-colors duration-200 ${
+              className={`underline-grow transition-colors duration-200 ${
                 pathname === link.href
-                  ? "text-white"
+                  ? "text-primary"
                   : "text-text-muted hover:text-text"
               }`}
             >
@@ -80,16 +80,16 @@ export default function Navbar() {
 
       {/* Mobile nav */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4 font-mono text-xs tracking-[0.15em] uppercase">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className={`text-sm transition-colors duration-200 ${
+                className={`transition-colors duration-200 ${
                   pathname === link.href
-                    ? "text-white"
+                    ? "text-primary"
                     : "text-text-muted hover:text-text"
                 }`}
               >

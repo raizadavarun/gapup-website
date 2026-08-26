@@ -9,43 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0E182D",
+        background: "#F6F3EA",
         primary: "#1E3A8A",
         accent: "#1F5F52",
-        surface: "#1E2127",
-        border: "#263347",
+        surface: "#EDE8DA",
+        border: "#DCD5C3",
         text: {
-          DEFAULT: "#FFFFFF",
-          muted: "#94A3B8",
+          DEFAULT: "#171A20",
+          muted: "#5B6270",
         },
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
-        mono: ["var(--font-geist-mono)", "monospace"],
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-      animation: {
-        "fade-in": "fadeIn 0.8s ease-out forwards",
-        "fade-up": "fadeUp 0.8s ease-out forwards",
-        float: "float 6s ease-in-out infinite",
-      },
-      keyframes: {
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
-        fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
+        sans: ["var(--font-text)", "Georgia", "serif"],
+        serif: ["var(--font-display)", "Georgia", "serif"],
+        mono: ["var(--font-mono)", "monospace"],
       },
     },
   },

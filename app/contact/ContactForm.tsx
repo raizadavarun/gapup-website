@@ -20,26 +20,12 @@ export default function ContactForm() {
   if (status === "success") {
     return (
       <div className="flex flex-col items-start justify-center py-8">
-        <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
-          <svg
-            className="w-5 h-5 text-blue-300"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 13l4 4L19 7"
-            />
-          </svg>
-        </div>
-        <h2 className="text-2xl font-semibold tracking-tight mb-3">
+        <span className="font-serif text-primary text-3xl mb-6">✓</span>
+        <h2 className="font-serif text-2xl font-semibold tracking-tight mb-3">
           Message Received
         </h2>
         <p className="text-text-muted text-sm leading-relaxed max-w-sm">
-          Thank you for reaching out. We've received your message and will be in
+          Thank you for reaching out. We&rsquo;ve received your message and will be in
           touch within 2 business days.
         </p>
       </div>
@@ -47,11 +33,11 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-8">
       <div>
         <label
           htmlFor="name"
-          className="block text-xs text-text-muted uppercase tracking-widest mb-2"
+          className="block font-mono text-[11px] text-text-muted uppercase tracking-[0.2em] mb-2"
         >
           Name
         </label>
@@ -63,13 +49,13 @@ export default function ContactForm() {
           value={form.name}
           onChange={handleChange}
           placeholder="Your name"
-          className="w-full px-4 py-3 rounded-lg bg-surface border border-border text-text placeholder:text-text-muted/50 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-colors"
+          className="w-full px-0 py-3 bg-transparent border-0 border-b border-border text-text placeholder:text-text-muted/50 text-sm focus:outline-none focus:border-primary transition-colors"
         />
       </div>
       <div>
         <label
           htmlFor="email"
-          className="block text-xs text-text-muted uppercase tracking-widest mb-2"
+          className="block font-mono text-[11px] text-text-muted uppercase tracking-[0.2em] mb-2"
         >
           Email
         </label>
@@ -81,13 +67,13 @@ export default function ContactForm() {
           value={form.email}
           onChange={handleChange}
           placeholder="your@email.com"
-          className="w-full px-4 py-3 rounded-lg bg-surface border border-border text-text placeholder:text-text-muted/50 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-colors"
+          className="w-full px-0 py-3 bg-transparent border-0 border-b border-border text-text placeholder:text-text-muted/50 text-sm focus:outline-none focus:border-primary transition-colors"
         />
       </div>
       <div>
         <label
           htmlFor="message"
-          className="block text-xs text-text-muted uppercase tracking-widest mb-2"
+          className="block font-mono text-[11px] text-text-muted uppercase tracking-[0.2em] mb-2"
         >
           Message
         </label>
@@ -95,16 +81,16 @@ export default function ContactForm() {
           id="message"
           name="message"
           required
-          rows={6}
+          rows={5}
           value={form.message}
           onChange={handleChange}
           placeholder="Tell us what's on your mind"
-          className="w-full px-4 py-3 rounded-lg bg-surface border border-border text-text placeholder:text-text-muted/50 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-colors resize-none"
+          className="w-full px-0 py-3 bg-transparent border-0 border-b border-border text-text placeholder:text-text-muted/50 text-sm focus:outline-none focus:border-primary transition-colors resize-none"
         />
       </div>
       <button
         type="submit"
-        className="w-full px-6 py-3 rounded-lg bg-primary text-background font-medium text-sm hover:bg-primary/90 transition-colors"
+        className="w-full px-6 py-3 border border-text bg-text text-background font-mono text-xs tracking-[0.15em] uppercase hover:bg-primary hover:border-primary transition-colors"
       >
         Send Message
       </button>

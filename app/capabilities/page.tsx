@@ -70,10 +70,10 @@ export default function CapabilitiesPage() {
       <section className="py-28 px-6 border-b border-border">
         <div className="max-w-4xl mx-auto">
           <SectionLabel className="mb-4">Capabilities</SectionLabel>
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight mb-8">
+          <h1 className="font-serif text-4xl md:text-6xl font-semibold tracking-tight leading-tight mb-8">
             What MoNor
             <br />
-            <span className="text-text-muted font-light">Builds</span>
+            <span className="text-text-muted italic font-normal">Builds</span>
           </h1>
           <p className="text-text-muted text-lg leading-relaxed max-w-2xl">
             Four interconnected disciplines — each rigorous on its own, and
@@ -92,13 +92,15 @@ export default function CapabilitiesPage() {
             >
               <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
                 <div className="md:col-span-4">
-                  <span className="text-primary/40 font-mono text-sm">
+                  <span className="text-primary/50 font-mono text-sm">
                     {cap.number}
                   </span>
-                  <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mt-2 mb-2">
+                  <h2 className="font-serif text-2xl md:text-3xl font-semibold tracking-tight mt-2 mb-2">
                     {cap.title}
                   </h2>
-                  <p className="text-emerald-400/70 text-sm">{cap.subtitle}</p>
+                  <p className="text-accent font-mono text-xs tracking-[0.1em] uppercase">
+                    {cap.subtitle}
+                  </p>
                 </div>
                 <div className="md:col-span-8">
                   <p className="text-text-muted leading-relaxed mb-8">
@@ -107,19 +109,9 @@ export default function CapabilitiesPage() {
                   <ul className="space-y-3">
                     {cap.points.map((point) => (
                       <li key={point} className="flex items-start gap-3">
-                        <svg
-                          className="w-4 h-4 text-blue-300 mt-0.5 flex-shrink-0"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
+                        <span className="text-primary font-mono text-sm mt-0.5 flex-shrink-0">
+                          —
+                        </span>
                         <span className="text-text-muted text-sm">{point}</span>
                       </li>
                     ))}
@@ -132,18 +124,18 @@ export default function CapabilitiesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 border-t border-border bg-surface/20">
+      <section className="py-24 px-6 border-t border-border bg-surface/60">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold tracking-tight mb-4">
+          <h2 className="font-serif text-2xl font-semibold tracking-tight mb-4">
             Want to understand how these capabilities apply to your context?
           </h2>
           <p className="text-text-muted mb-8 text-sm leading-relaxed">
-            Every engagement starts with a conversation. Reach out and we'll
+            Every engagement starts with a conversation. Reach out and we&rsquo;ll
             discuss where research-and-automation can create leverage for you.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-medium text-sm hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-text bg-text text-background font-mono text-xs tracking-[0.15em] uppercase hover:bg-primary hover:border-primary transition-colors"
           >
             Start a Conversation
           </Link>

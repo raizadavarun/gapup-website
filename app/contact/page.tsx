@@ -14,7 +14,7 @@ export default function ContactPage() {
       <section className="py-28 px-6 border-b border-border">
         <div className="max-w-4xl mx-auto">
           <SectionLabel className="mb-4">Contact</SectionLabel>
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
+          <h1 className="font-serif text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
             Get in Touch
           </h1>
         </div>
@@ -26,13 +26,12 @@ export default function ContactPage() {
           <div>
             <div className="space-y-8">
               <div>
-                <p className="text-text-muted text-xs uppercase tracking-widest mb-2">
+                <p className="font-mono text-text-muted text-[11px] uppercase tracking-[0.2em] mb-2">
                   Email
                 </p>
-                {/* TODO: update email once monor.in domain is confirmed */}
                 <a
                   href="mailto:contact@monor.in"
-                  className="text-blue-300 hover:text-blue-200 transition-colors text-base font-medium"
+                  className="text-primary hover:text-primary/70 transition-colors text-base font-medium underline-grow"
                 >
                   contact@monor.in
                 </a>
@@ -42,12 +41,12 @@ export default function ContactPage() {
                 <p className="text-text-muted text-sm leading-relaxed">
                   MoNor is a research-and-automation firm. We work with clients
                   who value disciplined research, systematic models, and
-                  execution that doesn't drift.
+                  execution that doesn&rsquo;t drift.
                 </p>
               </div>
               <div className="h-px bg-border" />
               <div>
-                <p className="text-text-muted text-xs uppercase tracking-widest mb-3">
+                <p className="font-mono text-text-muted text-[11px] uppercase tracking-[0.2em] mb-3">
                   Response Time
                 </p>
                 <p className="text-text-muted text-sm">

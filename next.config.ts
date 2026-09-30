@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
   // Static export: `next build` emits plain HTML/CSS/JS into out/, which is
@@ -9,6 +10,9 @@ const nextConfig: NextConfig = {
     // Next's Image Optimization API needs a server; static export has none.
     unoptimized: true,
   },
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
 };
 
-export default nextConfig;
+const withMDX = createMDX({});
+
+export default withMDX(nextConfig);
